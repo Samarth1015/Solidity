@@ -4,6 +4,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 import "../src/Contract.sol";
+import "forge-std/console.sol";
 
 
 
@@ -60,10 +61,16 @@ function testEmittrasfer()public{
    c.trans(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 10);
 
 
+}
+function testDeal() public {
    
+   vm.deal(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 10 ether);
+   
+console.logInt(int (address(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4).balance));
+   assertEq(address(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4).balance, 10 ether,"ok");
 
 }
 
-   
+      
 
     }

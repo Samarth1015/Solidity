@@ -26,7 +26,6 @@ function trans(address to,uint val) public{
    
    
 
-   
   
 
 }
